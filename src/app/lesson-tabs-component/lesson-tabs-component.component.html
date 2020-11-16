@@ -1,0 +1,15 @@
+<div>
+  <div>
+    <ul class="nav nav-tabs">
+      <li *ngFor="let lesson of lessons">
+        <a href="courses/{{this.courseID}}/modules/{{this.moduleID}}/lessons/{{lesson._id}}/topics">
+          {{lesson.title}}
+        </a>
+      </li>
+      <button (click)="createLesson()">
+        Create Lesson
+      </button>
+    </ul>
+  </div>
+  <app-topic-list-component></app-topic-list-component>
+</div>

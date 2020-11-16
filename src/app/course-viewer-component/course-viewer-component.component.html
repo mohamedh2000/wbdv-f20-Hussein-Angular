@@ -1,0 +1,22 @@
+<input [(ngModel)]="newCourseTitle"/>
+<button (click)="createCourse(newCourseTitle)">
+  Create Course
+</button>
+
+<div class="container">
+  <h1>Course Navigator</h1>
+      <ul class="list-group">
+        <li class="list-group-item">Courses {{selectedCourse}}</li>
+        <li (click)="selectCourse(course)"
+            class="list-group-item"
+            *ngFor="let course of courses"
+            [ngClass]="{'active': course.title === selectedCourse}">
+          <button (click)="deleteCourse(course)"> Delete </button>
+          <a href="/courses/{{course._id}}/modules">{{course.title}}</a>
+        </li>
+      </ul>
+
+</div>
+
+
+

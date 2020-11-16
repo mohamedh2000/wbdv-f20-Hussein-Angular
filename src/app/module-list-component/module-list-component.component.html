@@ -1,0 +1,23 @@
+
+<div class="row">
+  <div class="col-6">
+    <ul class="list-group">
+      <li class="list-group-item">Module {{selectedModule}}</li>
+      <li (click)="selectModule(module)"
+          class="list-group-item"
+          *ngFor="let module of modules"
+          [ngClass]="{'active': module.title === selectedModule}">
+        <a href="courses/{{this.courseID}}/modules/{{module._id}}/lessons">
+          {{module.title}}
+        </a>
+      </li>
+    </ul>
+    <button (click)="createModule()">
+      Create Module
+    </button>
+  </div>
+  <div class="col-6 nav nav-tabs">
+    <app-lesson-tabs-component></app-lesson-tabs-component>
+  </div>
+</div>
+
