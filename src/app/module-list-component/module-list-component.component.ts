@@ -11,6 +11,7 @@ export class ModuleListComponentComponent implements OnInit {
 
   modules = []
   courseID = ''
+  course:{}
   selectedModule = "";
 
 
@@ -34,6 +35,8 @@ constructor(private activatedRoute: ActivatedRoute,
       if (typeof courseId !== 'undefined' && courseId !== '') {
         this.moduleService.findModulesForCourse(courseId)
           .then(modules => this.modules = modules);
+        this.moduleService.findCourseWithId(courseId)
+          .then(course => this.course = course);
       }
     });
   }

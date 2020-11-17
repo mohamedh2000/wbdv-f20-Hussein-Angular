@@ -21,5 +21,10 @@ export class ModuleService {
         console.log(data)
         return data})
 
+    findCourseWithId = (cid) =>
+      fetch(`https://wbdv-generic-server.herokuapp.com/api/001420072/courses/${cid}`)
+        .then(response => response.json())
+        .then(course => {return course});
+
 
 }
