@@ -8,11 +8,17 @@ import { CourseService } from '../services/CourseServiceClient'
 import { ModuleService } from '../services/ModuleServiceClient'
 import { LessonService } from '../services/LessonServiceClient';
 import { TopicService } from '../services/TopicServiceClient';
+import { QuizzesServiceClient } from '../services/quiz.service.client'
+import { QuestionsServiceClient } from '../services/question.service.client'
 import { CourseViewerComponentComponent } from './course-viewer-component/course-viewer-component.component';
 import { CourseTableComponentComponent } from './course-table-component/course-table-component.component';
 import { ModuleListComponentComponent } from './module-list-component/module-list-component.component';
 import { LessonTabsComponentComponent } from './lesson-tabs-component/lesson-tabs-component.component';
-import { TopicListComponent } from './topic-list/topic-list.component'
+import { TopicListComponent } from './topic-list/topic-list.component';
+import { QuizzesComponent } from './quizzes/quizzes.component';
+import { QuizComponent } from './quiz/quiz.component';
+import { TrueFalseQuestionComponent } from './true-false-question/true-false-question.component';
+import { MultipleChoiceQuestionComponent } from './multiple-choice-question/multiple-choice-question.component'
 
 @NgModule({
   declarations: [
@@ -22,14 +28,19 @@ import { TopicListComponent } from './topic-list/topic-list.component'
     CourseTableComponentComponent,
     ModuleListComponentComponent,
     LessonTabsComponentComponent,
-    TopicListComponent
+    TopicListComponent,
+    QuizzesComponent,
+    QuizComponent,
+    TrueFalseQuestionComponent,
+    MultipleChoiceQuestionComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
   ],
-  providers: [CourseService, ModuleService, LessonService, TopicService],
+  providers: [CourseService, ModuleService, LessonService, 
+              TopicService, QuizzesServiceClient, QuestionsServiceClient],
   bootstrap: [AppComponent]
 })
 

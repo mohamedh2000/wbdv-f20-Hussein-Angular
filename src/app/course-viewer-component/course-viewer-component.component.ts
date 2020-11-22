@@ -11,7 +11,7 @@ export class CourseViewerComponentComponent implements OnInit {
   newCourseTitle = ''
   courses = []
 
-selectedCourse = "";
+  selectedCourse = "";
 
   createCourse = (newCourseTitle) => {
     let course = this.service.createCourse(newCourseTitle);
