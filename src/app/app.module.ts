@@ -18,7 +18,7 @@ import { TopicListComponent } from './topic-list/topic-list.component';
 import { QuizzesComponent } from './quizzes/quizzes.component';
 import { QuizComponent } from './quiz/quiz.component';
 import { TrueFalseQuestionComponent } from './true-false-question/true-false-question.component';
-import { MultipleChoiceQuestionComponent } from './multiple-choice-question/multiple-choice-question.component'
+import { MultipleChoiceQuestionComponent } from './multiple-choice-question/multiple-choice-question.component';
 
 @NgModule({
   declarations: [
