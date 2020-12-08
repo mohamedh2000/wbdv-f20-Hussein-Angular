@@ -11,6 +11,9 @@ export class QuizzesComponent implements OnInit {
 
   quizzes = []
   courseId = ''
+
+
+
   constructor(private service : QuizzesServiceClient,
               private route: ActivatedRoute) { }
 
@@ -21,7 +24,6 @@ export class QuizzesComponent implements OnInit {
         .then(quizzes => {this.quizzes = quizzes;
                           console.log(this.quizzes)})
     })
-
   }
 
 }
